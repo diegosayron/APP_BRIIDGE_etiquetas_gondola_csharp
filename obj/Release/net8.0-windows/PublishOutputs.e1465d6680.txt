@@ -1,0 +1,16 @@
+E:\_FONTES\APP_BRIIDGE_etiquetas\bin\Release\net8.0-windows\publish\APP_BRIIDGE_etiquetas.exe
+E:\_FONTES\APP_BRIIDGE_etiquetas\bin\Release\net8.0-windows\publish\runtimes\win-x86\native\WebView2Loader.dll
+E:\_FONTES\APP_BRIIDGE_etiquetas\bin\Release\net8.0-windows\publish\runtimes\win-x64\native\WebView2Loader.dll
+E:\_FONTES\APP_BRIIDGE_etiquetas\bin\Release\net8.0-windows\publish\runtimes\win-arm64\native\WebView2Loader.dll
+E:\_FONTES\APP_BRIIDGE_etiquetas\bin\Release\net8.0-windows\publish\Scripts\TokenCapture.js
+E:\_FONTES\APP_BRIIDGE_etiquetas\bin\Release\net8.0-windows\publish\APP_BRIIDGE_etiquetas.dll
+E:\_FONTES\APP_BRIIDGE_etiquetas\bin\Release\net8.0-windows\publish\APP_BRIIDGE_etiquetas.deps.json
+E:\_FONTES\APP_BRIIDGE_etiquetas\bin\Release\net8.0-windows\publish\APP_BRIIDGE_etiquetas.runtimeconfig.json
+E:\_FONTES\APP_BRIIDGE_etiquetas\bin\Release\net8.0-windows\publish\APP_BRIIDGE_etiquetas.pdb
+E:\_FONTES\APP_BRIIDGE_etiquetas\bin\Release\net8.0-windows\publish\zxing.dll
+E:\_FONTES\APP_BRIIDGE_etiquetas\bin\Release\net8.0-windows\publish\Microsoft.Web.WebView2.Core.dll
+E:\_FONTES\APP_BRIIDGE_etiquetas\bin\Release\net8.0-windows\publish\Microsoft.Web.WebView2.WinForms.dll
+E:\_FONTES\APP_BRIIDGE_etiquetas\bin\Release\net8.0-windows\publish\Microsoft.Web.WebView2.Wpf.dll
+E:\_FONTES\APP_BRIIDGE_etiquetas\bin\Release\net8.0-windows\publish\Microsoft.Web.WebView2.Core.xml
+E:\_FONTES\APP_BRIIDGE_etiquetas\bin\Release\net8.0-windows\publish\Microsoft.Web.WebView2.WinForms.xml
+E:\_FONTES\APP_BRIIDGE_etiquetas\bin\Release\net8.0-windows\publish\Microsoft.Web.WebView2.Wpf.xml

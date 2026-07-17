@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>APP_BRIIDGE_etiquetas</id>
+    <version>1.0.0</version>
+    <authors>APP_BRIIDGE_etiquetas</authors>
+    <description>Package Description</description>
+    <repository type="git" />
+    <dependencies>
+      <group targetFramework="net8.0-windows7.0">
+        <dependency id="Microsoft.Web.WebView2" version="1.0.4078.44" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+    <frameworkReferences>
+      <group targetFramework="net8.0-windows7.0">
+        <frameworkReference name="Microsoft.WindowsDesktop.App.WindowsForms" />
+      </group>
+    </frameworkReferences>
+  </metadata>
+  <files>
+    <file src="E:\_FONTES\APP_BRIIDGE_etiquetas\bin\Debug\net8.0-windows\APP_BRIIDGE_etiquetas.runtimeconfig.json" target="lib\net8.0-windows7.0\APP_BRIIDGE_etiquetas.runtimeconfig.json" />
+    <file src="E:\_FONTES\APP_BRIIDGE_etiquetas\bin\Debug\net8.0-windows\APP_BRIIDGE_etiquetas.dll" target="lib\net8.0-windows7.0\APP_BRIIDGE_etiquetas.dll" />
+  </files>
+</package>
