@@ -172,9 +172,9 @@ namespace APP_BRIIDGE_etiquetas
             lblEAN.Font = new Font("Segoe UI", 8F);
             lblEAN.Location = new Point(217, 340);
             lblEAN.Name = "lblEAN";
-            lblEAN.Size = new Size(53, 19);
+            lblEAN.Size = new Size(105, 19);
             lblEAN.TabIndex = 9;
-            lblEAN.Text = "Codigo";
+            lblEAN.Text = "789000000000";
             lblEAN.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // pictureBox1
@@ -191,9 +191,8 @@ namespace APP_BRIIDGE_etiquetas
             lblUnidade.Font = new Font("Segoe UI", 8F);
             lblUnidade.Location = new Point(729, 340);
             lblUnidade.Name = "lblUnidade";
-            lblUnidade.Size = new Size(53, 19);
+            lblUnidade.Size = new Size(0, 19);
             lblUnidade.TabIndex = 11;
-            lblUnidade.Text = "Codigo";
             lblUnidade.TextAlign = ContentAlignment.MiddleRight;
             // 
             // lblPreco

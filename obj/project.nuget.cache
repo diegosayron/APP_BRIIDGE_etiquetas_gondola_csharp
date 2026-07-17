@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "yFrPE5hx2Do=",
+  "dgSpecHash": "2VtK72Zjzb8=",
   "success": true,
-  "projectFilePath": "E:\\_FONTES\\APP_BRIIDGE_etiquetas\\APP_BRIIDGE_etiquetas.csproj",
+  "projectFilePath": "E:\\_FONTES\\APP_BRIIDGE_etiquetas_gondola_csharp\\APP_BRIIDGE_etiquetas.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\DiegoSayron\\.nuget\\packages\\microsoft.web.webview2\\1.0.4078.44\\microsoft.web.webview2.1.0.4078.44.nupkg.sha512",
     "C:\\Users\\DiegoSayron\\.nuget\\packages\\zxing.net\\0.16.11\\zxing.net.0.16.11.nupkg.sha512"

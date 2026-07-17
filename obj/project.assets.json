@@ -237,11 +237,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\_FONTES\\APP_BRIIDGE_etiquetas\\APP_BRIIDGE_etiquetas.csproj",
+      "projectUniqueName": "E:\\_FONTES\\APP_BRIIDGE_etiquetas_gondola_csharp\\APP_BRIIDGE_etiquetas.csproj",
       "projectName": "APP_BRIIDGE_etiquetas",
-      "projectPath": "E:\\_FONTES\\APP_BRIIDGE_etiquetas\\APP_BRIIDGE_etiquetas.csproj",
+      "projectPath": "E:\\_FONTES\\APP_BRIIDGE_etiquetas_gondola_csharp\\APP_BRIIDGE_etiquetas.csproj",
       "packagesPath": "C:\\Users\\DiegoSayron\\.nuget\\packages\\",
-      "outputPath": "E:\\_FONTES\\APP_BRIIDGE_etiquetas\\obj\\",
+      "outputPath": "E:\\_FONTES\\APP_BRIIDGE_etiquetas_gondola_csharp\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
