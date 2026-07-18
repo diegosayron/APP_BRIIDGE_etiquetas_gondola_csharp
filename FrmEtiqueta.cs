@@ -33,6 +33,8 @@ namespace APP_BRIIDGE_etiquetas
         Button btnImprimir = new();
 
         private readonly ApiClient api = new();
+        private Label label5;
+        private ComboBox cboTipoCodigo;
         private Produto? produtoAtual;
 
         public FrmEtiqueta()
@@ -69,12 +71,15 @@ namespace APP_BRIIDGE_etiquetas
             btnImprimir = new Button();
             btnFechar = new Button();
             btnPesquisar = new Button();
+            label5 = new Label();
+            cboTipoCodigo = new ComboBox();
             ((System.ComponentModel.ISupportInitialize)nudQuantidade).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // cboImpressora
             // 
+            cboImpressora.DropDownStyle = ComboBoxStyle.DropDownList;
             cboImpressora.Font = new Font("Segoe UI", 14F);
             cboImpressora.FormattingEnabled = true;
             cboImpressora.Location = new Point(215, 59);
@@ -106,6 +111,7 @@ namespace APP_BRIIDGE_etiquetas
             // 
             // cboTipoEtiqueta
             // 
+            cboTipoEtiqueta.DropDownStyle = ComboBoxStyle.DropDownList;
             cboTipoEtiqueta.Font = new Font("Segoe UI", 14F);
             cboTipoEtiqueta.FormattingEnabled = true;
             cboTipoEtiqueta.Location = new Point(215, 104);
@@ -139,7 +145,7 @@ namespace APP_BRIIDGE_etiquetas
             // 
             txtPesquisa.CharacterCasing = CharacterCasing.Upper;
             txtPesquisa.Font = new Font("Segoe UI", 14F);
-            txtPesquisa.Location = new Point(215, 215);
+            txtPesquisa.Location = new Point(215, 259);
             txtPesquisa.Name = "txtPesquisa";
             txtPesquisa.Size = new Size(567, 39);
             txtPesquisa.TabIndex = 6;
@@ -150,7 +156,7 @@ namespace APP_BRIIDGE_etiquetas
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 14F);
-            label4.Location = new Point(118, 222);
+            label4.Location = new Point(118, 266);
             label4.Name = "label4";
             label4.Size = new Size(91, 32);
             label4.TabIndex = 7;
@@ -160,7 +166,7 @@ namespace APP_BRIIDGE_etiquetas
             // lblDescricao
             // 
             lblDescricao.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
-            lblDescricao.Location = new Point(217, 308);
+            lblDescricao.Location = new Point(217, 352);
             lblDescricao.Name = "lblDescricao";
             lblDescricao.Size = new Size(567, 32);
             lblDescricao.TabIndex = 8;
@@ -170,7 +176,7 @@ namespace APP_BRIIDGE_etiquetas
             // 
             lblEAN.AutoSize = true;
             lblEAN.Font = new Font("Segoe UI", 8F);
-            lblEAN.Location = new Point(217, 340);
+            lblEAN.Location = new Point(217, 384);
             lblEAN.Name = "lblEAN";
             lblEAN.Size = new Size(105, 19);
             lblEAN.TabIndex = 9;
@@ -179,7 +185,8 @@ namespace APP_BRIIDGE_etiquetas
             // 
             // pictureBox1
             // 
-            pictureBox1.Location = new Point(217, 308);
+            pictureBox1.BorderStyle = BorderStyle.FixedSingle;
+            pictureBox1.Location = new Point(217, 352);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(567, 163);
             pictureBox1.TabIndex = 10;
@@ -189,7 +196,7 @@ namespace APP_BRIIDGE_etiquetas
             // 
             lblUnidade.AutoSize = true;
             lblUnidade.Font = new Font("Segoe UI", 8F);
-            lblUnidade.Location = new Point(729, 340);
+            lblUnidade.Location = new Point(729, 384);
             lblUnidade.Name = "lblUnidade";
             lblUnidade.Size = new Size(0, 19);
             lblUnidade.TabIndex = 11;
@@ -199,7 +206,7 @@ namespace APP_BRIIDGE_etiquetas
             // 
             lblPreco.BorderStyle = BorderStyle.FixedSingle;
             lblPreco.Font = new Font("Arial Rounded MT Bold", 48F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblPreco.Location = new Point(273, 363);
+            lblPreco.Location = new Point(273, 407);
             lblPreco.Name = "lblPreco";
             lblPreco.Size = new Size(448, 95);
             lblPreco.TabIndex = 12;
@@ -209,7 +216,7 @@ namespace APP_BRIIDGE_etiquetas
             // btnImprimir
             // 
             btnImprimir.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
-            btnImprimir.Location = new Point(621, 549);
+            btnImprimir.Location = new Point(621, 593);
             btnImprimir.Name = "btnImprimir";
             btnImprimir.Size = new Size(179, 49);
             btnImprimir.TabIndex = 13;
@@ -220,7 +227,7 @@ namespace APP_BRIIDGE_etiquetas
             // btnFechar
             // 
             btnFechar.Font = new Font("Segoe UI", 12F);
-            btnFechar.Location = new Point(419, 549);
+            btnFechar.Location = new Point(419, 593);
             btnFechar.Name = "btnFechar";
             btnFechar.Size = new Size(179, 49);
             btnFechar.TabIndex = 14;
@@ -231,7 +238,7 @@ namespace APP_BRIIDGE_etiquetas
             // btnPesquisar
             // 
             btnPesquisar.Font = new Font("Segoe UI", 8F);
-            btnPesquisar.Location = new Point(215, 260);
+            btnPesquisar.Location = new Point(215, 301);
             btnPesquisar.Name = "btnPesquisar";
             btnPesquisar.Size = new Size(150, 42);
             btnPesquisar.TabIndex = 15;
@@ -239,9 +246,32 @@ namespace APP_BRIIDGE_etiquetas
             btnPesquisar.UseVisualStyleBackColor = true;
             btnPesquisar.Click += btnPesquisar_Click;
             // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Font = new Font("Segoe UI", 14F);
+            label5.Location = new Point(30, 222);
+            label5.Name = "label5";
+            label5.Size = new Size(179, 32);
+            label5.TabIndex = 17;
+            label5.Text = "Tipo de Código";
+            label5.TextAlign = ContentAlignment.MiddleRight;
+            // 
+            // cboTipoCodigo
+            // 
+            cboTipoCodigo.DropDownStyle = ComboBoxStyle.DropDownList;
+            cboTipoCodigo.Font = new Font("Segoe UI", 14F);
+            cboTipoCodigo.FormattingEnabled = true;
+            cboTipoCodigo.Location = new Point(217, 215);
+            cboTipoCodigo.Name = "cboTipoCodigo";
+            cboTipoCodigo.Size = new Size(567, 39);
+            cboTipoCodigo.TabIndex = 16;
+            // 
             // FrmEtiqueta
             // 
             ClientSize = new Size(854, 669);
+            Controls.Add(label5);
+            Controls.Add(cboTipoCodigo);
             Controls.Add(btnPesquisar);
             Controls.Add(btnFechar);
             Controls.Add(btnImprimir);
@@ -303,12 +333,21 @@ namespace APP_BRIIDGE_etiquetas
         {
             CarregarImpressoras();
             CarregarTiposEtiqueta();
+            CarregarTipoCodigo();
 
             btnImprimir.Enabled = false;
 
             nudQuantidade.Value = 1;
 
             txtPesquisa.Focus();
+        }
+
+        private void CarregarTipoCodigo()
+        {
+            cboTipoCodigo.Items.Clear();
+            cboTipoCodigo.Items.Add("Código de Barras (EAN/GTIN)");
+            cboTipoCodigo.Items.Add("Código do Sistema");
+            cboTipoCodigo.SelectedIndex = 0;
         }
 
         private void CarregarImpressoras()
@@ -344,7 +383,14 @@ namespace APP_BRIIDGE_etiquetas
 
             try
             {
-                produtoAtual = await api.BuscarProdutoAsync(pesquisa);
+                //produtoAtual = await api.BuscarProdutoAsync(pesquisa);
+                bool pesquisarPorEAN = cboTipoCodigo.SelectedIndex == 0;
+
+                produtoAtual = await api.BuscarProdutoAsync(
+                    pesquisa,
+                    pesquisarPorEAN);
+
+
 
                 if (produtoAtual == null)
                 {

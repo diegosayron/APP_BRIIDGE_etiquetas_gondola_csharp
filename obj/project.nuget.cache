@@ -1,11 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "2VtK72Zjzb8=",
+  "dgSpecHash": "nLxOo0zmpGA=",
   "success": true,
   "projectFilePath": "E:\\_FONTES\\APP_BRIIDGE_etiquetas_gondola_csharp\\APP_BRIIDGE_etiquetas.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\DiegoSayron\\.nuget\\packages\\microsoft.web.webview2\\1.0.4078.44\\microsoft.web.webview2.1.0.4078.44.nupkg.sha512",
-    "C:\\Users\\DiegoSayron\\.nuget\\packages\\zxing.net\\0.16.11\\zxing.net.0.16.11.nupkg.sha512"
+    "C:\\Users\\DiegoSayron\\.nuget\\packages\\microsoft.win32.systemevents\\9.0.10\\microsoft.win32.systemevents.9.0.10.nupkg.sha512",
+    "C:\\Users\\DiegoSayron\\.nuget\\packages\\system.drawing.common\\9.0.10\\system.drawing.common.9.0.10.nupkg.sha512",
+    "C:\\Users\\DiegoSayron\\.nuget\\packages\\zxing.net\\0.16.11\\zxing.net.0.16.11.nupkg.sha512",
+    "C:\\Users\\DiegoSayron\\.nuget\\packages\\zxing.net.bindings.windows.compatibility\\0.16.14\\zxing.net.bindings.windows.compatibility.0.16.14.nupkg.sha512"
   ],
   "logs": []
 }

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("APP_BRIIDGE_etiquetas")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b227a78f4d45de7bdc552f6365c1e5916fee4516")]
 [assembly: System.Reflection.AssemblyProductAttribute("APP_BRIIDGE_etiquetas")]
 [assembly: System.Reflection.AssemblyTitleAttribute("APP_BRIIDGE_etiquetas")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

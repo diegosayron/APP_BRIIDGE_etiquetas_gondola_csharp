@@ -1,10 +1,8 @@
-﻿using ZXing;
-using ZXing.Common;
-using APP_BRIIDGE_etiquetas.Models;
-using System.Drawing;
+﻿using APP_BRIIDGE_etiquetas.Models;
 using System.Drawing.Printing;
 using ZXing;
 using ZXing.Common;
+using ZXing.Windows.Compatibility;
 
 
 namespace APP_BRIIDGE_etiquetas.Printing;
@@ -135,41 +133,34 @@ public class Etiqueta105x30Printer : EtiquetaPrinterBase
             sf);
 
         //CODIGO BARRAS DO RODAPÉ DA ETIQUETA
-        using Font fonteCodigoBarras =
-        new Font("Arial", 8);
+        Bitmap codigoBarras = GerarCodigoBarras(Produto.Codigo);
 
-        StringFormat sfCodigo = new()
-        {
-            Alignment = StringAlignment.Center
-        };
-
-        RectangleF areaCodigo = new RectangleF(
-            0,
-            12 * mmY,
-            70 * mmX,
-            7 * mmY);
-
-        g.DrawString(
-            Produto.CodigoSistema,
-            fonteCodigoBarras,
-            Brushes.Black,
-            areaCodigo,
-            sfCodigo);
+        g.DrawImage(
+            codigoBarras,
+            new RectangleF(
+                6 * mmX,
+                17 * mmY,
+                93 * mmX,
+                10 * mmY));
     }
 
 
     private Bitmap GerarCodigoBarras(string codigo)
     {
-        BarcodeWriter<Bitmap> writer = new()
-        {
-            Format = BarcodeFormat.EAN_13,
+        BarcodeFormat formato =
+            codigo.Length == 13 && codigo.All(char.IsDigit)
+                ? BarcodeFormat.EAN_13
+                : BarcodeFormat.CODE_128;
 
+        var writer = new BarcodeWriter
+        {
+            Format = formato,
             Options = new EncodingOptions
             {
                 Width = 420,
                 Height = 70,
                 Margin = 0,
-                PureBarcode = false
+                PureBarcode = true
             }
         };
 

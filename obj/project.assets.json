@@ -22,6 +22,53 @@
           }
         }
       },
+      "Microsoft.Win32.SystemEvents/9.0.10": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/Microsoft.Win32.SystemEvents.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/Microsoft.Win32.SystemEvents.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/_._": {}
+        },
+        "runtimeTargets": {
+          "runtimes/win/lib/net8.0/Microsoft.Win32.SystemEvents.dll": {
+            "assetType": "runtime",
+            "rid": "win"
+          }
+        }
+      },
+      "System.Drawing.Common/9.0.10": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Win32.SystemEvents": "9.0.10"
+        },
+        "compile": {
+          "lib/net8.0/System.Drawing.Common.dll": {
+            "related": ".pdb;.xml"
+          },
+          "lib/net8.0/System.Private.Windows.Core.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/System.Drawing.Common.dll": {
+            "related": ".pdb;.xml"
+          },
+          "lib/net8.0/System.Private.Windows.Core.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/_._": {}
+        }
+      },
       "ZXing.Net/0.16.11": {
         "type": "package",
         "compile": {
@@ -32,6 +79,23 @@
         "runtime": {
           "lib/net8.0/zxing.dll": {
             "related": ".XML"
+          }
+        }
+      },
+      "ZXing.Net.Bindings.Windows.Compatibility/0.16.14": {
+        "type": "package",
+        "dependencies": {
+          "System.Drawing.Common": "9.0.10",
+          "ZXing.Net": "0.16.11"
+        },
+        "compile": {
+          "lib/net8.0/ZXing.Windows.Compatibility.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/ZXing.Windows.Compatibility.dll": {
+            "related": ".pdb;.xml"
           }
         }
       }
@@ -135,6 +199,80 @@
         "tools/wv2winrt/zh-Hant/System.CommandLine.resources.dll"
       ]
     },
+    "Microsoft.Win32.SystemEvents/9.0.10": {
+      "sha512": "P1CEtsxar/RhfoH3r1vc9ra28LLVYphpcFBxyRIEMM/jP3qh4j9TU4sWH2RUhMZX+GbFxZ+zz1oSP2n9MwjshA==",
+      "type": "package",
+      "path": "microsoft.win32.systemevents/9.0.10",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "PACKAGE.md",
+        "THIRD-PARTY-NOTICES.TXT",
+        "buildTransitive/net461/Microsoft.Win32.SystemEvents.targets",
+        "buildTransitive/net462/_._",
+        "buildTransitive/net8.0/_._",
+        "buildTransitive/netcoreapp2.0/Microsoft.Win32.SystemEvents.targets",
+        "lib/net462/Microsoft.Win32.SystemEvents.dll",
+        "lib/net462/Microsoft.Win32.SystemEvents.xml",
+        "lib/net8.0/Microsoft.Win32.SystemEvents.dll",
+        "lib/net8.0/Microsoft.Win32.SystemEvents.xml",
+        "lib/net9.0/Microsoft.Win32.SystemEvents.dll",
+        "lib/net9.0/Microsoft.Win32.SystemEvents.xml",
+        "lib/netstandard2.0/Microsoft.Win32.SystemEvents.dll",
+        "lib/netstandard2.0/Microsoft.Win32.SystemEvents.xml",
+        "microsoft.win32.systemevents.9.0.10.nupkg.sha512",
+        "microsoft.win32.systemevents.nuspec",
+        "runtimes/win/lib/net8.0/Microsoft.Win32.SystemEvents.dll",
+        "runtimes/win/lib/net8.0/Microsoft.Win32.SystemEvents.xml",
+        "runtimes/win/lib/net9.0/Microsoft.Win32.SystemEvents.dll",
+        "runtimes/win/lib/net9.0/Microsoft.Win32.SystemEvents.xml",
+        "useSharedDesignerContext.txt"
+      ]
+    },
+    "System.Drawing.Common/9.0.10": {
+      "sha512": "FDakPhIcxHnhslLiz4ZQ+ALpHRpCU3zOep9Mcq+4hL23XwQrzmgJNYvf1tH4kJ/V36wO/ZhRr8nOfiz26P3wKg==",
+      "type": "package",
+      "path": "system.drawing.common/9.0.10",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "PACKAGE.md",
+        "THIRD-PARTY-NOTICES.TXT",
+        "buildTransitive/net461/System.Drawing.Common.targets",
+        "buildTransitive/net462/_._",
+        "buildTransitive/net8.0/_._",
+        "buildTransitive/netcoreapp2.0/System.Drawing.Common.targets",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net462/System.Drawing.Common.dll",
+        "lib/net462/System.Drawing.Common.pdb",
+        "lib/net462/System.Drawing.Common.xml",
+        "lib/net8.0/System.Drawing.Common.dll",
+        "lib/net8.0/System.Drawing.Common.pdb",
+        "lib/net8.0/System.Drawing.Common.xml",
+        "lib/net8.0/System.Private.Windows.Core.dll",
+        "lib/net8.0/System.Private.Windows.Core.xml",
+        "lib/net9.0/System.Drawing.Common.dll",
+        "lib/net9.0/System.Drawing.Common.pdb",
+        "lib/net9.0/System.Drawing.Common.xml",
+        "lib/net9.0/System.Private.Windows.Core.dll",
+        "lib/net9.0/System.Private.Windows.Core.xml",
+        "lib/netstandard2.0/System.Drawing.Common.dll",
+        "lib/netstandard2.0/System.Drawing.Common.pdb",
+        "lib/netstandard2.0/System.Drawing.Common.xml",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "system.drawing.common.9.0.10.nupkg.sha512",
+        "system.drawing.common.nuspec",
+        "useSharedDesignerContext.txt"
+      ]
+    },
     "ZXing.Net/0.16.11": {
       "sha512": "OZfAVu88hl87BffQ+rlWCj/vLvAhhCK4QnFaoveeF/MY8SjHNSYBQ3qyUEWlPKNgBQGh1syXhCDg10vUnCsqkg==",
       "type": "package",
@@ -222,12 +360,41 @@
         "zxing.net.0.16.11.nupkg.sha512",
         "zxing.net.nuspec"
       ]
+    },
+    "ZXing.Net.Bindings.Windows.Compatibility/0.16.14": {
+      "sha512": "bJw1qjpNJ8JmDP55UBAvA5bCU+vSEGua4z43nukJqMlrpkKu6mTw6NZGJZntM8KbNQ3RNLu8DJMJBSWUd0ifYg==",
+      "type": "package",
+      "path": "zxing.net.bindings.windows.compatibility/0.16.14",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net8.0/ZXing.Windows.Compatibility.dll",
+        "lib/net8.0/ZXing.Windows.Compatibility.pdb",
+        "lib/net8.0/ZXing.Windows.Compatibility.xml",
+        "lib/net9.0/ZXing.Windows.Compatibility.dll",
+        "lib/net9.0/ZXing.Windows.Compatibility.pdb",
+        "lib/net9.0/ZXing.Windows.Compatibility.xml",
+        "lib/netcoreapp3.0/ZXing.Windows.Compatibility.dll",
+        "lib/netcoreapp3.0/ZXing.Windows.Compatibility.pdb",
+        "lib/netcoreapp3.0/ZXing.Windows.Compatibility.xml",
+        "lib/netcoreapp3.1/ZXing.Windows.Compatibility.dll",
+        "lib/netcoreapp3.1/ZXing.Windows.Compatibility.pdb",
+        "lib/netcoreapp3.1/ZXing.Windows.Compatibility.xml",
+        "lib/netstandard2.0/ZXing.Windows.Compatibility.dll",
+        "lib/netstandard2.0/ZXing.Windows.Compatibility.pdb",
+        "lib/netstandard2.0/ZXing.Windows.Compatibility.xml",
+        "logo.jpg",
+        "readme.md",
+        "zxing.net.bindings.windows.compatibility.0.16.14.nupkg.sha512",
+        "zxing.net.bindings.windows.compatibility.nuspec"
+      ]
     }
   },
   "projectFileDependencyGroups": {
     "net8.0-windows7.0": [
       "Microsoft.Web.WebView2 >= 1.0.4078.44",
-      "ZXing.Net >= 0.16.11"
+      "ZXing.Net >= 0.16.11",
+      "ZXing.Net.Bindings.Windows.Compatibility >= 0.16.14"
     ]
   },
   "packageFolders": {
@@ -287,6 +454,10 @@
           "ZXing.Net": {
             "target": "Package",
             "version": "[0.16.11, )"
+          },
+          "ZXing.Net.Bindings.Windows.Compatibility": {
+            "target": "Package",
+            "version": "[0.16.14, )"
           }
         },
         "imports": [

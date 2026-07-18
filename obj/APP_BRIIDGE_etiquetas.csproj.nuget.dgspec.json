@@ -57,6 +57,10 @@
             "ZXing.Net": {
               "target": "Package",
               "version": "[0.16.11, )"
+            },
+            "ZXing.Net.Bindings.Windows.Compatibility": {
+              "target": "Package",
+              "version": "[0.16.14, )"
             }
           },
           "imports": [

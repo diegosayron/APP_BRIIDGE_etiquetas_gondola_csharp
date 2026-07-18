@@ -24,7 +24,7 @@ public class ApiClient
             new AuthenticationHeaderValue("Bearer", token);
     }
 
-    private async Task<string> BuscarProduto(string pesquisa)
+    private async Task<string> BuscarProduto(string pesquisa, bool pesquisarPorEAN)
     {
         var body = new
         {
@@ -40,21 +40,21 @@ public class ApiClient
             },
             filtro = new
             {
-                ehPesquisaSimples = true,
+                ehPesquisaSimples = !pesquisarPorEAN,
                 invalidGenre = Array.Empty<string>(),
                 types = Array.Empty<string>(),
                 possuiComposicao = false,
                 somenteComEstoque = false,
                 cadastroInativo = false,
                 fornecedor = "",
-                codigoEAN = "",
+                codigoEAN = pesquisarPorEAN ? pesquisa : "",
                 marca = "",
                 prateleira = "",
                 categoria = "",
                 atributo = "",
                 genero = "",
                 tipo = "",
-                pesquisaSimples = pesquisa
+                pesquisaSimples = pesquisarPorEAN ? "" : pesquisa
             }
         };
 
@@ -69,11 +69,13 @@ public class ApiClient
         return await response.Content.ReadAsStringAsync();
     }
 
-    public async Task<Produto?> BuscarProdutoAsync(string pesquisa)
+
+
+    public async Task<Produto?> BuscarProdutoAsync(string pesquisa, bool pesquisarPorEAN)
     {
         AtualizarToken(TokenProvider.Token!);
 
-        string json = await BuscarProduto(pesquisa);
+        string json = await BuscarProduto(pesquisa, pesquisarPorEAN);
 
         using JsonDocument doc = JsonDocument.Parse(json);
 
@@ -102,16 +104,27 @@ public class ApiClient
 
         Produto produto = new();
 
-        produto.Id = p.GetProperty("Id").ToString();
-
-        // Código Sistema (7908414459028)
+        // Código interno
         produto.CodigoSistema = p.GetProperty("Codigo").ToString();
 
-        // Código do produto (19725)
-        produto.Codigo = p.GetProperty("CodigoNFe").ToString();
+        // Código NFe retornado pela API
+        produto.CodigoNFe = p.GetProperty("CodigoNFe").ToString();
 
-        // Mantemos por compatibilidade
-        produto.CodigoNFe = produto.Codigo;
+        // Código que será impresso
+        if (pesquisarPorEAN)
+        {
+            // A API não devolve o EAN.
+            // Então usamos o mesmo código pesquisado.
+            produto.Codigo = pesquisa;
+        }
+        else
+        {
+            // Pesquisa pelo código interno.
+            // Se houver um CódigoNFe diferente, ele será impresso.
+            produto.Codigo = string.IsNullOrWhiteSpace(produto.CodigoNFe)
+                ? produto.CodigoSistema
+                : produto.CodigoNFe;
+        }
 
         produto.Nome = p.GetProperty("Nome").ToString();
 
